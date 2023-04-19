@@ -1,0 +1,84 @@
+.post-form{
+    background-color: rgb(2, 28, 50);
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    
+}
+
+
+
+
+.form #post-img-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid #d6d3d3;
+    color: #d6d3d3;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+.form #post-img-input span{
+    font-size: 32px;
+}
+
+.post-small-headers{
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.post-small-headers input{
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    /* text-align: center; */
+    background: none;
+    border: 1px solid #d6d3d3;
+    padding: 5px;
+    color: #d6d3d3;
+    font-weight: 600;
+    width: 100%;
+}
+
+.post-desc textarea{
+    resize: none;
+    padding: 10px;
+    width: 100%;
+    background: none;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: #d6d3d3;
+    font-size: 18px;
+    border: 1px solid #d6d3d3;
+}
+
+.post-desc{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.postBtn{
+    background: none;
+    outline: none;
+    border: none;
+    background-color: #d6d3d3;
+    padding: 6px 12px;
+    border-radius: 2px;
+    text-align: center;
+    color: rgb(2, 28, 50);
+    font-weight: 600;
+}
+
+.post-display-img{
+    width: 99%;
+    border-radius: 6px;
+    border: 3px solid #d6d3d3;
+    display: none;
+}

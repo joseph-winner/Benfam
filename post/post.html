@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben Family Website</title>
+    <link rel="stylesheet" href="../public/index.css">
+    <link rel="stylesheet" href="./post.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- NAV BAR -->
+    <nav class="navigation-menu">
+        <article class="logo">FAMILY</article>
+        <article class="search-small-header">
+            <i class="fa fa-search"></i>
+            <input type="search" name="search" id="search-header-input">
+        </article>
+        <article class="user-account-small">
+            <i class="fa fa-user"></i>
+        </article>
+        <article class="nav-items">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Posts</a></li>
+                <li><a href="#">Post</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Logout</a></li>
+                <li><a href="#">Search</a></li>
+            </ul>
+        </article>
+        <article class="humberger">
+            <i class="fa fa-bars"></i>
+        </article>
+    </nav>
+    <!-- NAV BAR -->
+
+    <form class="post-form">
+        <article class="form">
+            <section>
+                <label for="fileInput" id="post-img-input"><span> +</span> Add Image</label>
+                <input type="file" name="file" id="fileInput" style="display: none;">
+                <img src="" class="post-display-img">
+                <div class="post-small-headers">
+                    <!-- <input type="time" name="time" id="postTime"> -->
+                    <input type="text" name="post-heading" id="post-heading" placeholder="Post Tittle...">
+                </div>
+                <div class="post-desc">
+                    <textarea name="post-content" id="post-content"  placeholder="Post Something..."></textarea>
+                </div>
+                <button class="postBtn">Post Now</button>
+            </section>
+        </article>
+    </form>
+
+<!-- FOOTER -->
+    <footer>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="text-white">Get In Touch</h5>
+                        <p><i class="fa fa-map-marker"></i>King Fahad Plaza</p>
+                        <p><i class="fa fa-phone"></i>+256 778 000 000</p>
+                        <p><i class="fa fa-envelope me-3"></i>info@benfam.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn-social" href=""><i class="fa fa-twitter"></i></a>
+                            <a class="btn-social" href=""><i class="fa fa-facebook-f"></i></a>
+                            <a class="btn-social" href=""><i class="fa fa-youtube"></i></a>
+                            <a class="btn-social" href=""><i class="fa fa-instagram"></i></a>
+                            <a class="btn-social" href=""><i class="fa fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h5 class="text-white">Quick Link</h5>
+                        <a class="btn-link" href="">About Us</a>
+                        <a class="btn-link" href="">Contact Us</a>
+                        <a class="btn-link" href="">Privacy Policy</a>
+                        <a class="btn-link" href="">Terms & Condition</a>
+                        <a class="btn-link" href="">Career</a>
+                    </div>
+                    <div class="col">
+                        <h5 class="text-white">Popular Link</h5>
+                        <a class="btn-link" href="">About Us</a>
+                        <a class="btn-link" href="">Contact Us</a>
+                        <a class="btn-link" href="">Privacy Policy</a>
+                        <a class="btn-link" href="">Terms & Condition</a>
+                        <a class="btn-link" href="">Career</a>
+                    </div>
+                    <div class="col" style="margin-bottom: 15px;">
+                        <h5 class="text-white">Newsletter</h5>
+                        <p style="text-align: start;">We you to subscribe to our latest updates.</p>
+                        <div class="relative">
+                            <input class="form" type="text" placeholder="Your Email">
+                            <button type="button" class="btn"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="footer-row">
+                        <div class="cols">
+                            &copy; 2023 <a class="border-bottom" href="#">Benfam</a>, All Right Reserved. 
+                            <span>Designed by  <a href="">JoshTechnologies</a></span>
+                        </div>
+                        <div class="cols">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <hr>
+                                <a href="">Cookies</a>
+                                <hr>
+                                <a href="">Help</a>
+                                <hr>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- FOOTER -->
+
+<script src="./post.js"></script>
+</body>
+</html>

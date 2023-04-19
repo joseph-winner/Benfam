@@ -1,0 +1,35 @@
+.user-feeds{
+    width: 100%;
+}
+.user-feeds h3{
+    margin-left: 30px;
+    margin-top: 15px;
+    border-bottom: 2px solid #000;
+}
+.all-feeds .user-post img{
+    width: 100%;
+    border-radius: 4px;
+}
+
+.all-feeds .user-post{
+    margin: 10px 10px 20px 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.all-feeds{
+    display: flex;
+    flex-wrap: wrap;
+}
+.all-feeds >*{
+    flex: 1 1 25%;
+}
+
+
+
+@media(max-width:767px){
+    .all-feeds >*{
+        flex: 1 1 100%;
+    }
+}

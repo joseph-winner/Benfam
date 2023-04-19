@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./public/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -35,31 +35,79 @@
             <i class="fa fa-bars"></i>
         </article>
     </nav>
-    <!-- NAV BAR -->
-
+    <!-- NAV BAR --> 
+    <!-- <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./posts/posts.html">Posts</a></li>
+        <li><a href="./post/post.html">Post</a></li>
+        <li><a href="./userprofile/userprofile.html">Account</a></li>
+        <li><a href="./registration/Registration.html">Register</a></li>
+    </ul> -->
 
     <!-- BANNER -->
     <header>
         <article class="header">
-            <img src="../images/cover2.jpeg" alt="">
             <div class="banner-desc">
-                <p>
-                    Welcome to our family website! We are excited to share our stories, memories, and updates with you. 
-                    <span class="header-bigscreen">
-                        Explore our site to learn more about our family and stay connected with us. Thank you for visiting!
-                    </span>
-                </p>
-                <button>Explore More</button>
             </div>
-
-            <!-- <div class="banner-img">
-                <img src="../images/black-family.jpg" alt="">
-            </div> -->
         </article>
     </header>
     <!-- BANNER -->
 
     <main>
+        <article class="about-fam">
+            <h2>WHO WE ARE</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. In repudiandae ut cupiditate magni necessitatibus voluptatibus aliquam mollitia harum ea a.
+            </p>
+        </article>
+
+
+        <article class="family">
+            <h2>Family And Friends</h2>
+            <p class="lines">
+                
+                <span class="line1"></span> <i class="fa fa-heart-o"></i> <span class="line1"></span>
+            </p>
+
+            <section class="family-profiles">
+                <div class="profile-content">
+                    <img src="../images/profileHolder.jpeg" alt="">
+                    <h4>Musa Kaasa Weremera</h4>
+                    <p>Buddu Masaka</p>
+                    <p>Know More</p>
+                </div>
+
+                <div class="profile-content">
+                    <img src="../images/profileHolder.jpeg" alt="">
+                    <h4>Yusuf Mukiibi Goloba</h4>
+                    <p>Buddu Masaka</p>
+                    <p class="more">Know More</p>
+                </div>
+
+                <div class="profile-content">
+                    <img src="../images/femaleImageHolder.jpeg" alt="">
+                    <h4>Nakitende Safia</h4>
+                    <p>Buddu Masaka</p>
+                    <p class="more">Know More</p>
+                </div>
+
+                <div class="profile-content">
+                    <img src="./images/femaleImageHolder.jpeg" alt="">
+                    <h4>Najjuma Empanga</h4>
+                    <p>Buddu Masaka</p>
+                    <p class="more">Know More</p>
+                </div>
+
+                <div class="profile-content">
+                    <img src="../images/femaleImageHolder.jpeg" alt="">
+                    <h4>Nabukalu Kampunga</h4>
+                    <p>Buddu Masaka</p>
+                    <p class="more">Know More</p>
+                </div>
+            </section>
+        </article>
+
+
         <article class="admin-posts">
             <h1>Family News</h1>
             <section class="admin-section">
@@ -350,55 +398,73 @@
             </section>
         </article>
 
-        <article class="family">
-            <h2>Family And Friends</h2>
-            <p class="lines">
-                
-                <span class="line1"></span> <i class="fa fa-heart-o"></i> <span class="line1"></span>
-            </p>
-
-            <section class="family-profiles">
-                <div class="profile-content">
-                    <img src="../images/profileHolder.jpeg" alt="">
-                    <h4>Musa Kaasa Weremera</h4>
-                    <p>Buddu Masaka</p>
-                </div>
-
-                <div class="profile-content">
-                    <img src="../images/profileHolder.jpeg" alt="">
-                    <h4>Yusuf Mukiibi Goloba</h4>
-                    <p>Buddu Masaka</p>
-                </div>
-
-                <div class="profile-content">
-                    <img src="../images/femaleImageHolder.jpeg" alt="">
-                    <h4>Nakitende Safia</h4>
-                    <p>Buddu Masaka</p>
-                </div>
-
-                <div class="profile-content">
-                    <img src="../images/femaleImageHolder.jpeg" alt="">
-                    <h4>Najjuma Empanga</h4>
-                    <p>Buddu Masaka</p>
-                </div>
-
-                <div class="profile-content">
-                    <img src="../images/femaleImageHolder.jpeg" alt="">
-                    <h4>Nabukalu Kampunga</h4>
-                    <p>Buddu Masaka</p>
-                </div>
-            </section>
-        </article>
     </main>
 
     <footer>
-        <article class="footer-content">
-            <section class="footer-qlinks">
-                <div class="qlinks-items">
-                    ul
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="text-white">Get In Touch</h5>
+                        <p><i class="fa fa-map-marker"></i>King Fahad Plaza</p>
+                        <p><i class="fa fa-phone"></i>+256 778 000 000</p>
+                        <p><i class="fa fa-envelope me-3"></i>info@benfam.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn-social" href=""><i class="fa fa-twitter"></i></a>
+                            <a class="btn-social" href=""><i class="fa fa-facebook-f"></i></a>
+                            <a class="btn-social" href=""><i class="fa fa-youtube"></i></a>
+                            <a class="btn-social" href=""><i class="fa fa-instagram"></i></a>
+                            <a class="btn-social" href=""><i class="fa fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h5 class="text-white">Quick Link</h5>
+                        <a class="btn-link" href="">About Us</a>
+                        <a class="btn-link" href="">Contact Us</a>
+                        <a class="btn-link" href="">Privacy Policy</a>
+                        <a class="btn-link" href="">Terms & Condition</a>
+                        <a class="btn-link" href="">Career</a>
+                    </div>
+                    <div class="col">
+                        <h5 class="text-white">Popular Link</h5>
+                        <a class="btn-link" href="">About Us</a>
+                        <a class="btn-link" href="">Contact Us</a>
+                        <a class="btn-link" href="">Privacy Policy</a>
+                        <a class="btn-link" href="">Terms & Condition</a>
+                        <a class="btn-link" href="">Career</a>
+                    </div>
+                    <div class="col" style="margin-bottom: 15px;">
+                        <h5 class="text-white">Newsletter</h5>
+                        <p style="text-align: start;">We you to subscribe to our latest updates.</p>
+                        <div class="relative">
+                            <input class="form" type="text" placeholder="Your Email">
+                            <button type="button" class="btn"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
+                        </div>
+                    </div>
                 </div>
-            </section>
-        </article>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="footer-row">
+                        <div class="cols">
+                            &copy; 2023 <a class="border-bottom" href="#">Benfam</a>, All Right Reserved. 
+                            <span>Designed by  <a href="">JoshTechnologies</a></span>
+                        </div>
+                        <div class="cols">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <hr>
+                                <a href="">Cookies</a>
+                                <hr>
+                                <a href="">Help</a>
+                                <hr>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
