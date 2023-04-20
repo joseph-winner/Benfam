@@ -401,13 +401,14 @@ footer{
     
 
     .admin-posts h1{
-        background-color: teal;
         width: 150px;
-        color: #fff;
+        color: #3b7197;
         font-size: 16px;
         text-align: left;
         padding-left: 8px;
+        margin-left: 10px;
         margin-top: 10px;
+        border-bottom: 1px solid #3b7197;
     }
 
     header .banner-desc{
