@@ -13,6 +13,16 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+var openBtn = document.querySelector(".humberger");
+var closeBtn = document.querySelector(".closeBtn");
+
+openBtn.addEventListener("click", ()=>{
+    document.querySelector(".side-bar").style.width = "200px";
+})
+
+closeBtn.addEventListener("click", ()=>{
+    document.querySelector(".side-bar").style.width = "0px";
+})
 
 // TAKING POST INPUTS
 var postImg = document.getElementById("fileInput");
@@ -44,6 +54,7 @@ postBtn.addEventListener("click", (e)=>{
     var postBody = document.querySelector("#post-content").value;
     var postedby = document.querySelector("#post-username").value
     var postedAt = document.querySelector("#post-time").value
+    var postedOn = document.querySelector("#post-date").value
     var imgUrl = postSrc;
     // console.log(postTitle,postBody,imgUrl);
     setDoc(doc(db, "posts", postTitle), {
@@ -51,6 +62,7 @@ postBtn.addEventListener("click", (e)=>{
         postBody: postBody,
         postImg: imgUrl,
         createdAt: postedAt,
+        postedOn: postedOn,
         postBy: postedby
       });
 })

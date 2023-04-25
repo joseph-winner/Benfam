@@ -29,8 +29,70 @@ async function readData() {
     const querySnapshot = await getDocs(collection(db, "posts"));
     querySnapshot.forEach((doc) => {
       posts = doc.data();
-      console.log(posts)
+      postData(posts)
     })
   }
 
-readData()
+readData();
+
+async function postData(posts){
+    var postsholder = document.querySelector(".user-posts");
+    var singlePost = document.createElement("div");
+    var postedBy = posts.postBy;
+    var postTime = posts.createdAt;
+    var postTitle = posts.postTitle;
+    var postBody = posts.postBody;
+    var postImage = posts.postImg;
+    var postDate = posts.postedOn;
+    // console.log(postedBy,postTime,postTitle,postBody,postImage) 
+    var singlePostContent = `
+                            <div class="user-post">
+                            <div class="img-section">
+                            <img src="${postImage}" class="post-img" alt="">
+                            <span class="post-header">
+                            ${postTitle}
+                            </span> 
+                        </div>
+                        <div class="post-desc">
+                        <span class="time"> <i class="fa fa-calendar"></i></span>
+                            <span class="post-date">
+                                ${postDate}
+                           </span>
+                            <span class="time">
+                                <i class="fa fa-clock-o"></i>
+                            </span>
+                            <span class="post-time">
+                            ${postTime}
+                            </span>
+                            <span class="user">
+                                <i class="fa fa-user"></i>
+                            </span>
+                            <span class="post-owner">
+                            ${postedBy}
+                            </span> <br> <br>
+
+
+                            <div class="post-interactions">
+                            <span class="like-btn">
+                                <i class="fa fa-heart"></i> 
+                            </span>
+                            <span class="heart-counter">3</span>
+                            <span class="comments">
+                                <i class="fa fa-comments-o"></i>
+                            </span>
+                            <span class="comments-counter">
+                                6
+                            </span>
+                            <span class="share-btn" style='margin-left: 20px; font-size:10px;'>
+                                <i class="fa fa-share"></i>
+                            </span>
+                        </div>
+                        </div>
+                        
+                        
+                    </div>
+    `
+    singlePost.innerHTML = singlePostContent;
+    postsholder.append(singlePost)
+
+}

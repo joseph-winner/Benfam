@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <link rel="stylesheet" href="./alerts.css">
+
+    <style>
+        .error-message {
+            background-color: #F2DEDE;
+            border: 1px solid #A94442;
+            color: #A94442;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-align: center;
+            }
+    </style>
+</head>
+<body>
+    <div class="error-message">
+        <p>Oops, something went wrong!</p>
+        <p>Please try again later.</p>
+      </div> 
+</body>
+<script>
+    setTimeout(function() {
+            window.history.go(-1);
+            }, 6000);
+</script>
+</html>

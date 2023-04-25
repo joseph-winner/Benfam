@@ -5,6 +5,10 @@
     align-items: center;
 }
 
+.registration-form{
+    margin-top: 70px;
+}
+
 .registration-form h2{
     margin: 8px;
 }
@@ -13,18 +17,21 @@
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    border: 2px solid green;
+    border: 2px solid #3b7197;
     padding: 3px;
 }
 .family-head p{
     font-weight: 600;
 }
 
+
 .selection-grands{
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-top: 20px;
+    flex-wrap: wrap;
+    margin: 10px;
+
 }
 
 .selection-item-1, .selection-item-2, .selection-item-3, .selection-item-4{
@@ -32,19 +39,25 @@
 }
 
 .selection-grands img{
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
-    border: 2px solid green;
+    border: 2px solid #3b7197;
+    pointer-events: none;
 }
 
-.selection-grands div{
+.selection-grands p{
+    pointer-events: none;
+}
+
+.selection-grands >*{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     margin: 4px;
+    flex: 1 1 18%;
 }
 
 .form-content{
@@ -58,13 +71,13 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    border: 2px solid green;
+    border: 2px solid #3b7197;
 }
 
 .form-content input{
     outline: none;
     border: none;
-    border: 1px solid #ccc;
+    border: 1px solid #3b7197;
     padding: 4px;
     border-radius: 3px;
     margin: 8px;
@@ -104,7 +117,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: green;
+    background-color: #3b7197;
     border-radius: 15px;
     width: 100px;
     margin-left: 10px;
@@ -119,7 +132,7 @@
 }
 
 .formSubmit{
-    background-color: green;
+    background-color: #3b7197;
     color: #fff;
     text-align: center;
     outline: none;
@@ -128,6 +141,7 @@
     border-radius: 4px;
     font-weight: 600;
     cursor: pointer;
+    width: 70%;
 }
 
 .chilren-list img{
@@ -153,8 +167,11 @@
 .child-name{
     display: flex;
     align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: #74bde0;
+    color: #fff;
+    font-weight: 500;
     border-radius: 6px;
+    text-align: center;
 }
 
 .input-holders img{
@@ -165,7 +182,7 @@
 }
 
 .selections-element h4{
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #3b7197;
     width: fit-content;
     margin-bottom: 8px;
 }
@@ -183,7 +200,15 @@
     margin-top: 6px;
 }
 
-
+#reg-profile{
+    background-color: #3b7197;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 6px;
+    text-align: center;
+    padding: 6px 12px;
+    margin-top: 15px;
+}
 
 
 
@@ -206,7 +231,7 @@
 
 
 @media(max-width:767px){
-    .selection-grands{
-        flex-wrap: wrap;
+    .selection-grands >*{
+        flex: 1 1 33%;
     }
 }

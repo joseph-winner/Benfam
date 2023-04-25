@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link rel="stylesheet" href="./alerts.css">
+
+    <style>
+        .success-message {
+            background-color: #DFF0D8;
+            border: 1px solid #3C763D;
+            color: #3C763D;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-align: center;
+}
+    </style>
+</head>
+<body>
+    <div class="success-message">
+        <p>Thank you for signing up!</p>
+        <p>You will receive a confirmation email shortly.</p>
+        <p>Redirecting to Home...</p>
+      </div>
+
+      <script>
+        setTimeout(function() {
+            window.location.href = "../index.html";
+            }, 6000);
+      </script>
+</body>
+</html>

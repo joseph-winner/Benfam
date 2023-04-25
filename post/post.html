@@ -22,13 +22,13 @@
         </article>
         <article class="nav-items">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="../index.html">Home</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Posts</a></li>
-                <li><a href="#">Post</a></li>
-                <li><a href="#">Account</a></li>
-                <li><a href="#">Logout</a></li>
+                <li><a href="../posts/posts.html">Posts</a></li>
+                <li><a href="../post/post.html">Post</a></li>
+                <li><a href="../registration/Registration.html">Account</a></li>
+                <li><a href="../index.html">Logout</a></li>
                 <li><a href="#">Search</a></li>
             </ul>
         </article>
@@ -37,6 +37,21 @@
         </article>
     </nav>
     <!-- NAV BAR -->
+
+    <!-- SIDE BAR -->
+
+    <div class="side-bar">
+        <span class="closeBtn">&times;</span>
+        <a href="../index.html">Home</a>
+        <a href="../Alerts/wrong.html">Contact</a>
+        <a href="../Alerts/wrong.html">About</a>
+        <a href="../posts/posts.html">Posts</a>
+        <a href="../post/post.html">Post</a>
+        <a href="../registration/Registration.html">Account</a>
+        <a href="../index.html">Logout</a>
+        <a href="../Alerts/wrong.html">Search</a>
+</div>
+<!-- SIDE BAR -->
 
     <form class="post-form">
         <article class="form">
@@ -49,6 +64,7 @@
                 </div>
                 <input type="name" name="name" id="post-username" placeholder="Enter User-name">
                 <input type="time" name="time" id="post-time">
+                <input type="date" name="date" id="post-date">
                 <div class="post-desc">
                     <textarea name="post-content" id="post-content"  placeholder="Write Something..."></textarea>
                 </div>
@@ -125,6 +141,15 @@
         </div>
     </footer>
 <!-- FOOTER -->
+<script>
+    document.querySelector(".user-account-small").addEventListener("click", ()=>{
+        if (localStorage.getItem('name') !== null) {
+            window.location.href = "../userprofile/userprofile.html";
+        } else {
+        window.location.href = "./home/index.html"
+        }
+    })
+</script>
 
 <script src="./post.js" type="module"></script>
 </body>

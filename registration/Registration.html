@@ -38,6 +38,21 @@
     </nav>
     <!-- NAV BAR -->
 
+    <!-- SIDE BAR -->
+
+    <div class="side-bar">
+        <span class="closeBtn">&times;</span>
+        <a href="../index.html">Home</a>
+        <a href="../Alerts/wrong.html">Contact</a>
+        <a href="../Alerts/wrong.html">About</a>
+        <a href="../posts/posts.html">Posts</a>
+        <a href="../post/post.html">Post</a>
+        <a href="../registration/Registration.html">Account</a>
+        <a href="../index.html">Logout</a>
+        <a href="../Alerts/wrong.html">Search</a>
+</div>
+<!-- SIDE BAR -->
+
     <!-- REGISTRATION -->
     <article class="registration-form">
         <h2>Welcome to Benfam Family Registration Ensure to fill all required areas to create your Profile</h2>
@@ -54,7 +69,8 @@
                 
             </div>
         </div>
-            <div class="prompt-sect-1">
+            <div class="prompt-sect-1" style="text-align: center;">
+                <h4 style="margin-top: 8px; text-align: center;">Select One</h4>
                 <div class="selection-grands">
                     <div class="selection-item-1">
                         <img src="../images/profileHolder.jpeg" alt="">
@@ -84,6 +100,7 @@
             </div>
 
             <div class="goloba-children" style="display: none;">
+                <h4 style="margin-top: 8px; text-align: center;">Select One</h4>
                 <div class="chilren-list">
                     <div class="child-name">
                         <img src="../images/profileHolder.jpeg" class="reg-form-img">
@@ -177,25 +194,27 @@
 
             <div class="reg-member-form" style="display: none;">
                 <div class="form-content">
-                    <img src="../images/profileHolder.jpeg" class="reg-form-img">
-                    <label for="regProf">Upload</label>
+                    <img class="reg-form-img" id="testpp" src="../images/profileHolder.jpeg">
+                    <label for="regProf" id="reg-profile">Upload Your Photo</label>
                     <input type="file" name="profile" id="regProf" style="display: none;">
-                    <input type="text" name="grandname" id="grandname" placeholder="Grand Parent Name" required>
-                    <input type="text" name="fathername" id="fathername" placeholder="Father's Name" required>
-                    <input type="name" name="username" id="username" placeholder="Enter User Name" required>
-                    <input type="name" name="fullname" id="fullname" placeholder="Enter Full Name" required>
-                    <input type="tel" name="userphone" id="userphone" placeholder="Telephone" required>
-                    <input type="email" name="useremail" id="useremail" placeholder="Enter Email">
+                    <input type="name" name="username" id="username" placeholder="Enter Your User Name" required>
+                    <input type="name" name="fullname" id="fullname" placeholder="Enter Your Full Name" required>
+                    <input type="text" name="grandfather" id="grandfather" placeholder="Your Grand Father's Name" required>
+                    <input type="text" name="grandmother" id="grandmother" placeholder="Your Grand Mother's Name" required>
+                    <input type="text" name="fathername" id="fathername" placeholder="Your Father's Name" required>
+                    <input type="text" name="mothername" id="mothername" placeholder="Your Mother's Name" required>
+                    <input type="tel" name="userphone" id="userphone" placeholder="Your Telephone" required>
+                    <input type="email" name="useremail" id="useremail" placeholder="Enter Your Email">
                     <input type="text" name="currentlocation" id="currentlocation" placeholder="Your Current Location" required>
-                    <input type="text" name="previouslocation" id="previouslocation" placeholder="Previous Location" required>
+                    <input type="text" name="previouslocation" id="previouslocation" placeholder="Your Previous Location" required>
                     <div class="radioBtn">
                         <input type="radio" name="marriage" id="married"> Married
                         <input type="radio" name="marriage" id="notmarriage">Not Married
                     </div>
                     <div class="married" style="display: none;">
                         <input type="text" name="wifename" id="wifename" placeholder="Your Wife Name" required>
-                        <input type="tel" name="wifetel" id="wifetel" placeholder="Wife Telephone" required>
-                        <input type="text" name="childname" id="childname" placeholder="Child's Name">
+                        <input type="tel" name="wifetel" id="wifetel" placeholder="Your Wife Telephone" required>
+                        <input type="text" name="childname" id="childname" placeholder="Your Child's Name">
                         <span class="add-child"> Add More +</span>
                     </div>
                     <div class="not-married" style="display: none;">
@@ -203,7 +222,9 @@
                         <input type="text" name="kinnumber" id="kinnumber" placeholder="Next of Kin Number" required>
                         <input type="text" name="kinemail" id="kinemail" placeholder="Next of Kin Email">
                     </div>
-                    <input type="text" name="userEmployment" id="userEmployment" placeholder="Occupation" required>
+                    <input type="text" name="userEmployment" id="userEmployment" placeholder="Your Employment" required>
+                    <input type="number" name="number" id="employmentPhone" placeholder="Your Employment Contact Phone">
+
 
                     <button type="submit" class="formSubmit">Submit</button>
                 </div>
@@ -276,6 +297,15 @@
             </div>
         </div>
     </footer>
-    <script src="./registration.js"></script>
+    <script>
+        document.querySelector(".user-account-small").addEventListener("click", ()=>{
+            if (localStorage.getItem('name') !== null) {
+                window.location.href = "../userprofile/userprofile.html";
+            } else {
+            window.location.href = "./home/index.html"
+            }
+        })
+    </script>
+    <script src="./registration.js" type="module"></script>
 </body>
 </html>

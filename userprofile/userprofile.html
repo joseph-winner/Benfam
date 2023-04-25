@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ben Family Website</title>
-    <link rel="stylesheet" href="./public/index.css">
+    <link rel="stylesheet" href="../public/index.css">
+    <link rel="stylesheet" href="./userprofile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -13,11 +14,9 @@
     <nav class="navigation-menu">
         <article class="logo">FAMILY</article>
         <article class="search-small-header">
-            <i class="fa fa-search"></i>
-            <input type="search" name="search" id="search-header-input">
         </article>
         <article class="user-account-small">
-            <i class="fa fa-user"></i>
+            <img id="pnavimg" src="../images/profileHolder.jpeg" alt="">
         </article>
         <article class="nav-items">
             <ul>
@@ -36,7 +35,20 @@
         </article>
     </nav>
     <!-- NAV BAR -->
-
+    <div class="profile">
+        <img id="profileImage" src="../images/profileHolder.jpeg" alt="Profile Image">
+        <h1 class="profileName"></h1>
+        <p>Web Developer</p>
+        <ul>
+          <li><strong>Email:</strong> john.doe@example.com</li>
+          <li><strong>Phone:</strong> (123) 456-7890</li>
+          <li><strong>Location:</strong> New York, NY</li>
+        </ul>
+      </div>
+      <div class="action-buttons">
+        <button class="edit-button"> <i class="fa fa-pencil"></i> Edit</button>
+        <button class="delete-button"> <i class="fa fa-trash"></i> Delete</button>
+      </div>
 
     <footer>
         <div class="container-fluid">
@@ -104,5 +116,29 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        if (localStorage.getItem('name') !== null) {
+            const name = localStorage.getItem('name');
+            const image = localStorage.getItem('imageLink');
+            document.querySelector(".search-small-header").innerText = name;
+            document.querySelector(".profileName").innerText = name;
+            document.querySelector("#pnavimg").src = image;
+            document.querySelector("#profileImage").src = image;
+            } else {
+            window.location.href = "../registration/Registration.html";
+            }
+
+            document.querySelector(".delete-button").addEventListener("click", ()=>{
+                localStorage.removeItem('name');
+                localStorage.removeItem('imageLink');
+                window.location.href = "../home/index.html";
+
+            })
+
+            document.querySelector(".edit-button").addEventListener("click", ()=>{
+                window.location.href = "../registration/Registration.html";
+            })
+    </script>
 </body>
 </html>
